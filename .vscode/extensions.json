@@ -1,7 +1,0 @@
-{
-    "recommendations": [
-        "dbaeumer.vscode-eslint",
-        "ms-azuretools.vscode-docker",
-        "fractalbrew.backticks"
-    ]
-}

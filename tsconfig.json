@@ -1,33 +1,34 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
+    "target": "ES2020",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    /* Additional Checks */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "sourceMap": true,
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
     "paths": {
       "@/*": [
-        "./src/*"
+        "*"
       ]
-    },
-    "sourceMap": true,
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
+    }
   },
   "include": [
-    "./src/**/*"
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

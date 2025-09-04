@@ -1,5 +1,5 @@
-import { z } from 'zod';
 import { defaultEndpointsFactory } from 'express-zod-api';
+import { z } from 'zod';
 
 export const helloWorldEndpoint = defaultEndpointsFactory.build({
   method: 'get',

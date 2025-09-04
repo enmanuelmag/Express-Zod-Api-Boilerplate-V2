@@ -1,15 +1,10 @@
 {
-  "name": "minimal-express-zod-api-boilerplate",
-  "version": "1.0.1",
-  "description": "📝 A minimal Express Zod API boilerplate, ready to clone and build!",
+  "name": "express-zod-api-boilerplate",
+  "version": "2.0.0",
+  "description": "A boilerplate for building APIs with Express and Zod",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=18.0.0"
-  },
-  "homepage": "https://github.com/TheNaubit/minimal-express-zod-api-boilerplate",
-  "bugs": {
-    "url": "https://github.com/TheNaubit/minimal-express-zod-api-boilerplate/issues",
-    "email": "code@nauverse.com"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "clean": "rimraf ./dist ./src/client/client.ts ./src/docs/api.yaml",
@@ -22,10 +17,10 @@
     "lint:fix": "eslint  --cache --fix \"src/**/*.{js,ts}\"",
     "generate:client": "NODE_ENV=development tsx ./src/scripts/clientGenerator.ts",
     "generate:docs": "NODE_ENV=development tsx ./src/scripts/docsGenerator.ts",
-    "docker:build": "docker build -t naucode/minimal-express-zod-api-boilerplate:latest .",
-    "docker:run": "docker run -e NODE_ENV=production naucode/minimal-express-zod-api-boilerplate",
-    "docker:build:dev": "docker build --target builder -t naucode/minimal-express-zod-api-boilerplate:dev .",
-    "docker:run:dev": "docker run -e NODE_ENV=development naucode/minimal-express-zod-api-boilerplate:dev"
+    "docker:build": "docker build -t enmanuelmag/express-zod-api-boilerplate:latest .",
+    "docker:run": "docker run -e NODE_ENV=production enmanuelmag/express-zod-api-boilerplate",
+    "docker:build:dev": "docker build --target builder -t enmanuelmag/express-zod-api-boilerplate:dev .",
+    "docker:run:dev": "docker run -e NODE_ENV=development enmanuelmag/express-zod-api-boilerplate:dev"
   },
   "_moduleAliases": {
     "@": "dist"
@@ -47,40 +42,56 @@
     "zod"
   ],
   "author": {
-    "name": "Al - @naucode",
-    "email": "code@nauverse.com",
-    "url": "https://nauverse.com"
+    "name": "Enmanuel Magallanes Pinargote",
+    "email": "enmanuelmag@cardor.dev",
+    "url": "https://enmanuelmag.cardor.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheNaubit/minimal-express-zod-api-boilerplate.git"
+    "url": "https://github.com/enmanuelmag/express-zod-api-boilerplate.git"
   },
   "license": "MIT",
   "dependencies": {
     "@total-typescript/ts-reset": "^0.4.2",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-zod-api": "^10.1.2",
+    "compression": "^1.8.1",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "express-zod-api": "^25.3.1",
+    "http-errors": "^2.0.0",
+    "luxon": "^3.7.1",
     "module-alias": "^2.2.2",
-    "zod": "^3.21.4"
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "tsc-alias": "^1.8.16",
+    "zod": "^4.0.0"
   },
   "devDependencies": {
+    "@tanstack/eslint-config": "^0.3.0",
     "@tsconfig/recommended": "^1.0.2",
-    "@types/express": "^4.17.17",
+    "@types/compression": "^1.8.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.3",
+    "@types/luxon": "^3.6.2",
     "@types/module-alias": "^2.0.1",
-    "@types/node": "^18.15.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "eslint": "^8.37.0",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^20.14.8",
+    "@types/node-fetch": "^2.6.12",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.34.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
+    "lint-staged": "^15.2.4",
     "prettier": "^2.8.7",
     "rimraf": "^4.4.1",
-    "ts-node": "^10.9.1",
+    "ts-add-js-extension": "^1.6.6",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^3.12.7",
-    "typescript": "^5.0.3"
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
   }
 }

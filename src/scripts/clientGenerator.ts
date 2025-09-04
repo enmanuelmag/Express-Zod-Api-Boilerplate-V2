@@ -1,14 +1,19 @@
-/* eslint-disable no-console */
-import fs from 'fs';
-import { Client } from 'express-zod-api';
-import { routing } from '@/routes';
+import { Integration } from "express-zod-api";
+import fs from "node:fs";
 
-console.log('✍️  Generating client...');
+import { routing } from "@/routes";
+
+console.log("✍️  Generating client...");
+
+const client = new Integration({
+  routing,
+  variant: "client", // <— optional, see also "types" for a DIY solution
+});
 
 // Check https://github.com/RobinTail/express-zod-api/tree/master#generating-a-frontend-client
 fs.writeFileSync(
-  './src/client/client.ts',
-  `/* eslint-disable @typescript-eslint/no-explicit-any */\r\n${new Client({ routing }).print()}`,
-  'utf-8',
+  "./src/client/client.ts",
+  `/* eslint-disable @typescript-eslint/no-explicit-any */\r\n${client.printFormatted()}`,
+  "utf-8"
 );
-console.log('✅ Client generated at ./client/client.ts');
+console.log("✅ Client generated at ./client/client.ts");

@@ -1,9 +1,13 @@
-import { Method, createMiddleware } from 'express-zod-api';
-import { z } from 'zod';
+import { Middleware } from "express-zod-api";
+import { z } from "zod";
 
-export const methodProviderMiddleware = createMiddleware({
+import type { Method } from "express-zod-api";
+
+export const methodProviderMiddleware = new Middleware({
   input: z.object({}),
-  middleware: async ({ request }) => ({
-    method: request.method.toLowerCase() as Method,
-  }),
+  handler: async ({ request }) => {
+    return new Promise<{ method: Method }>((resolve) => {
+      resolve({ method: request.method.toLowerCase() as Method });
+    });
+  },
 });
