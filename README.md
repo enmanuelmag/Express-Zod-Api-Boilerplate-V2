@@ -111,4 +111,5 @@ Finally, as always, I recommend you to check the docs of the dependencies, that 
 - [TS Reset Docs](https://github.com/total-typescript/ts-reset)
 
 ## Changelog
+- **2.0.1**: Add markdown instructions for the project, to help agent like ChatGPT to understand the project structure and conventions.
 - **2.0.0**: Moved support to Node 22, moved whole dependencies to ESM. Increase version of express-zod-api, eslint, ExpressJs. Add Eslint plugin to sort imports. Add support for auto-generating OpenAPI V3 docs. Add support for auto-generating client.ts file. Add Dockerfile optimized for production with multi-stage builds. Add Dockerfile stage for development usage. Add several scripts to package.json to manage Docker images and containers. Add support for aliases in imports both in dev and prod runtimes. Change the file structure to a more standard one. Remove useless dependencies.
