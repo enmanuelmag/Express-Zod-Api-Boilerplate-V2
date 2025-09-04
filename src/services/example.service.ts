@@ -1,5 +1,5 @@
 export async function exampleWithRandomThrow(): Promise<boolean> {
-  if (Date.now() % 2 === 0) throw new Error('Throwing it!');
+  if (Date.now() % 2 === 0) throw new Error("Throwing it!");
 
-  return true;
+  return new Promise((resolve) => resolve(true));
 }
