@@ -19,7 +19,7 @@ It has the **minimum dependencies** and stuff already implemented since I don't 
  - **➰ Multi-instance, auto-restart and dockerized**: In the Dockerized production build, you won't have to worry about instances, restarts... everything is already configured with PM2.
 
 ## Requeriments
-- ✅ At least Node.js 18.X.X
+- ✅ At least Node.js 22.X.X
 - ✅ Docker in your system (only if you want to create Docker images)
 
 ## How to start?
@@ -111,5 +111,4 @@ Finally, as always, I recommend you to check the docs of the dependencies, that 
 - [TS Reset Docs](https://github.com/total-typescript/ts-reset)
 
 ## Changelog
-- **1.0.1**: Moved support to Node 18, moved from Nodemon to TSX, fixed .env file load, fixed several typos
-- **1.0.0**: Initial version
+- **2.0.0**: Moved support to Node 22, moved whole dependencies to ESM. Increase version of express-zod-api, eslint, ExpressJs. Add Eslint plugin to sort imports. Add support for auto-generating OpenAPI V3 docs. Add support for auto-generating client.ts file. Add Dockerfile optimized for production with multi-stage builds. Add Dockerfile stage for development usage. Add several scripts to package.json to manage Docker images and containers. Add support for aliases in imports both in dev and prod runtimes. Change the file structure to a more standard one. Remove useless dependencies.
